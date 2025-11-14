@@ -8,11 +8,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust the height based on your design */
+  padding: 2rem 1rem;
+  margin-top: 2rem;
 }
 
 .center-tex2 span {
   color: white; /* Set the desired text color */
+}
+
+/* Large devices - reduce top spacing */
+@media screen and (min-width: 1024px) {
+  .center-tex2 {
+    height: auto;
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Extra large devices - minimal spacing */
+@media screen and (min-width: 1440px) {
+  .center-tex2 {
+    margin-top: 0.5rem;
+    padding: 1rem;
+  }
 }
 
 :root{
@@ -42,24 +60,64 @@
 .bodys{
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(to right, var(--main-gradient-color1), var(--main-gradient-color2), var(--main-gradient-color3), var(--main-gradient-color4)); 
-  height: 100vh;
+  min-height: auto;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  padding: 2rem 1rem;
+  margin-top: 0;
+}
+
+/* Large devices - adjust spacing */
+@media screen and (min-width: 1024px) {
+  .bodys {
+    padding: 1.5rem 1rem;
+    gap: 25px;
+  }
+}
+
+/* Extra large devices */
+@media screen and (min-width: 1440px) {
+  .bodys {
+    padding: 1rem;
+    gap: 20px;
+  }
 }
 .center-text2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust the height based on your design */
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .center-text2 span {
   color: white;
   margin-bottom: 8px; /* Adjust the margin as needed */
+}
+
+/* Large devices - reduce top spacing */
+@media screen and (min-width: 1024px) {
+  .center-text2 {
+    height: auto;
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Extra large devices - minimal spacing */
+@media screen and (min-width: 1440px) {
+  .center-text2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
 }
 
 .card-wrap{
@@ -75,7 +133,9 @@
   transition: all .2s ease-in-out;
 }
 .card-wrap:hover{
-  transform: scale(1.1);
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 35px,
+              rgba(0, 0, 0, 0.4) 0px 10px 10px;
 }
 .card-header{
   height: 200px;

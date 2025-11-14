@@ -1,23 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Services.css";
-import Card from "../Card/Card";
-import HeartEmoji from "../../img/heartemoji.png";
-import Glasses from "../../img/glasses.png";
-import Humble from "../../img/humble.png";
-import { themeContext } from "../../Context";
-import { motion } from "framer-motion";
-import Resume from './resume.pdf';
 
 const Services = () => {
-  // context
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
-
-  // transition
-  const transition = {
-    duration: 1,
-    type: "spring",
-  };
 
   return (<>
   {/* <div class="content-wrapper">
@@ -115,7 +99,7 @@ const Services = () => {
         <i className="fa-sharp fa-solid fa-right-long ma"></i>
       </p>
     </span>
-    <a href="https://wa.me/+923105321069">
+    <a href="https://wa.me/+923189391781">
       <button className="button s-button">Whatsapp</button>
     </a>
     <div
@@ -133,7 +117,7 @@ const Services = () => {
     >
       <a
         className="nav-link text-light"
-        href="https://petite-vase.surge.sh"
+        href="https://saloonshop.vercel.app/"
       >
         <Card
           emoji={HeartEmoji}

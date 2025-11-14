@@ -39,6 +39,7 @@
 }
 .i-icons {
   margin-top: 3rem;
+  margin-bottom: 4rem;
   display: flex;
   gap: 0rem;
 }
@@ -98,8 +99,15 @@
 @media screen and (max-width: 480px) {
   .Intro {
     flex-direction: column;
-    gap: 7rem;
-    height: 64rem;
+    gap: 3rem;
+    height: auto;
+    min-height: auto;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .i-icons {
+    margin-bottom: 2rem;
   }
 
   .i-right {
@@ -112,6 +120,38 @@
   .floating-div:nth-of-type(1){
     /* display: none; */
     top: -7rem !important;;
+  }
+}
+
+/* Very small/narrow screens (Galaxy Z Fold, etc.) */
+@media screen and (max-width: 400px) and (min-height: 800px) {
+  .Intro {
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .i-icons {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .i-right {
+    transform: scale(0.7);
+  }
+}
+
+/* Extra narrow screens */
+@media screen and (max-width: 360px) {
+  .Intro {
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .i-icons {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -207,4 +247,69 @@
   font-weight: 800;
   font-size: 8.5vw;
   text-transform: uppercase;
+}
+
+/* Amazing Animations - Added without disturbing existing design */
+.i-button {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.i-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.i-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.i-right > img {
+  animation: float-image 4s ease-in-out infinite;
+}
+
+.i-right > img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.i-right > img:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.i-right > img:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes float-image {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.blur {
+  animation: pulse-blur 3s ease-in-out infinite;
+}
+
+@keyframes pulse-blur {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
 }

@@ -9,7 +9,7 @@ const Card = ({emoji, heading, detail, color}) => {
       <span>{detail}</span>
       <a
       className="nav-link text-light"
-      href="https://petite-vase.surge.sh"
+      href="https://saloonshop.vercel.app/"
     >  <button className="c-button">Check it</button></a>
      
     </div>
@@ -19,7 +19,7 @@ const Card = ({emoji, heading, detail, color}) => {
       <span>{detail}</span>
       <a
       className="nav-link text-light"
-      // href="https://petite-vase.surge.sh"
+      href="#"
     >  <button className="c-button">Click Here</button></a>
      
     </div>
